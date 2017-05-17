@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>支付宝首页</title>
+	<link rel="shortcut icon" href="images/link.ico">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/index.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+	<div id="main">
+	<div id="btn">
+		<ul>
+			<li class="li1">
+				<a href="#title"><div class="circle" id="one"></div></a>
+			</li>
+			<li>
+				<a href="#second"><div class="circle" id="two"></div></a>
+			</li>
+			<li>
+				<a href="#third"><div class="circle" id="three"></div></a>
+			</li>
+			<li>
+				<a href="#fourth"><div class="circle" id="four"></div></a>
+			</li>
+			<li>
+				<a href="#fifth"><div class="circle" id="five"></div></a>
+			</li>
+			<li>
+				<a href="#sixth"><div class="circle" id="six"></div></a>
+			</li>
+			<li>
+				<a href="#adv1"><div class="circle" id="last"></div></a>
+			</li>
+		</ul>
+	</div>
+	<div id="title1">
+			<div id="top2">
+				<div id="l_top1">
+					<ul>
+						<li><a href="#">个人</a></li>
+						<li><a href="#">企业</a></li>
+						<li><a href="#">开发者</a></li>
+					</ul> 
+				</div>
+				<div id="r_top1">
+					<div id="app1">
+						<a href="#">支付宝app</a>|
+					</div>
+					<div id="list1" onmouseover="show('list_show1')" onmouseout="hiden('list_show1')">
+						<a href="#">客服服务</a>
+						<div id="list_show1">
+							<ul>
+								<li>服务大厅</li>
+								<li>自助服务</li>
+								<li>提建议</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="middle1">
+				<div id="m_left1">
+					<img src="images/pay.png">
+				</div>
+				<div id="m_right1">
+					<ul>
+						<li>
+							<a href="#">首页</a>
+						</li>
+						<li>
+							<a href="#">财富中心</a>
+						</li>
+						<li>
+							<a href="#">安全保障</a>
+						</li>
+						<li>|</li>
+						<li>
+							<a href="#">商家中心</a>
+						</li>
+						<li>
+							<a href="#">开发平台</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+	</div>
+		<div id="title">
+			<div id="top">
+				<div id="l_top">
+					<ul>
+						<li><a href="#">个人</a></li>
+						<li><a href="#">企业</a></li>
+						<li><a href="#">开发者</a></li>
+					</ul> 
+				</div>
+				<div id="r_top">
+					<div id="app">
+						<a href="#">支付宝app</a>|
+					</div>
+					<div id="list" onmouseover="show('list_show')" onmouseout="hiden('list_show')">
+						<a href="#">客服服务</a>
+						<div id="list_show">
+							<ul>
+								<li>服务大厅</li>
+								<li>自助服务</li>
+								<li>提建议</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="middle">
+				<div id="m_left">
+					<img src="images/pay.png">
+				</div>
+				<div id="m_right">
+					<ul>
+						<li>
+							<a href="#">首页</a>
+						</li>
+						<li>
+							<a href="#">财富中心</a>
+						</li>
+						<li>
+							<a href="#">安全保障</a>
+						</li>
+						<li>|</li>
+						<li>
+							<a href="#">商家中心</a>
+						</li>
+						<li>
+							<a href="#">开发平台</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+				<video id="mp" autoplay="false" preload="auto" loop="false" poster="images/videobg.jpg">
+						<source src="images/play.mp4" type="video/mp4">
+				</video>
+				<div id="s_denglu">
+					<div id="close"></div>
+					<div class="c_div" id="c_div1">
+						登录支付宝
+					</div>
+					<form action="pay_action.php" method="post">
+						<input type="text" name="username" class="c_div" id="c_div2"/>
+						<input type="password" name="password" class="c_div" id="c_div3"/>
+						<div class="c_div" id="c_div4">
+							<div id="c_input">
+								<input type="text" name="code" id="yzm_code">
+							</div>
+							
+								<img src="pay_code.php" id="imgcode"/>
+						
+						</div>
+						<div class="c_div" id="c_div5">
+							<a href="register.html">
+								<span>免费注册</span></a> | 
+							<span class="ewm_span">二维码登录</span>
+						</div>
+						<center>
+						<input type="submit" class="c_div" id="c_div6" value="登&nbsp录">
+						</center>
+					</form>
+				</div>
+				<div id="ewm_denglu">
+					<div id="close1"></div>
+					<div id="ewm1">扫码登录</div>
+					<div id="ewm2"></div>
+					<div id="ewm3">请使用手机支付宝扫码</div>
+					<div id="ewm4">
+						<span class="ewm_span2">使用账号登录 </span>|
+						<span> 下载支付宝</span>
+					</div>
+				</div>
+				<div id="mvideo"></div>
+				<div id="change">
+					<img src="images/change.png">
+				</div>
+				<div id="cover"></div>
+				<div id="denglu">登录</div>
+				<a href="register.html">
+					<div id="zhuce">立即注册</div>
+				</a>
+				<div id="bofan">
+					<img src="images/bofan.png">
+				</div>
+			<div id="second">
+				<div id="s_pelope">
+					<img src="images/second2.png">
+				</div>
+				<div id="clouds1">
+					<img src="images/clouds1.png">
+				</div>
+				<div id="clouds2">
+					<img src="images/clouds2.png">
+				</div>
+				<div id="clouds3">
+					<img src="images/clouds3.png">
+				</div>
+				<div id="s_font">
+					<img src="images/s_font.png">
+				</div>
+				<div class="bg_font" id="s_fontbg">
+					转账付款
+					转到支付宝账户，瞬间到账 | 转到银行卡，2小时到账
+				</div>
+			</div>
+			<div id="third">
+				<div id="third1">
+					<img src="images/third1.png">
+				</div>
+				<div id="third2">
+					<img src="images/third2.png">
+				</div>
+				<div id="t_third">
+					<img src="images/t_font.png">
+				</div>
+				<div class="bg_font" id="t_fontbg">
+					扫描二维码或条码付款
+					自动识别不安全链接，安心付款
+					
+
+					出示付款码付款
+					付款码每次不同，保障付款安全
+					
+
+					通过声波收付款
+					没有网络也能收款付款
+
+				</div>
+			</div>
+			<div id="fourth">
+				<div id="f_font">
+					<img src="images/f_font.png">
+				</div>
+					<div class="bg_font" id="f_fontbg">
+						国际运输
+						如淘宝购物般简单，无需办理转运
+
+						品牌正品
+						海外商家直发，100%正品保证
+
+						人民币付款
+						无需外币兑换费，无需双币种信用卡
+					</div>
+			</div>
+			<div id="fifth">
+				<div id="fif_font">
+					<img src="images/fif_font.png">
+				</div>
+				<div class="bg_font" id="fif_fontbg">
+					赚的更多
+					定期稳定收益，让你赚更多
+					
+					安全保障
+					权威金融机构负责风险管理
+					
+					买的方便
+					一键预约购买，自动匹配成交
+					
+					灵活变现
+					产品到期前，急用钱时可提前变现
+				</div>
+			</div>
+			<div id="sixth">
+				<div id="sis_font">
+					<img src="images/sis_font.png">
+				</div>
+				<div class="bg_font" id="sis_fontbg">
+					挂号
+					余号查询，足不出户就能挂号
+
+					智能导诊
+					叫号与导航，按时到达科室不迷路
+
+					付医药费
+					手机支付，各类医药费边走边付
+
+					查看报告
+					消息通知，随时查看就诊报告
+				</div>
+			</div>
+			<div id="bottom">
+				<div id="foot1">
+					<div id="div1">
+						<div id="adv1">
+							<ul>
+								<li>
+									付款，是件容易的事</br>
+									<span>
+										付款方式 | 134 家金融机构
+									</span>
+								</li>
+								<li>
+									会员保障，安心付款</br>
+									<span>
+										安全升级 | 应急服务 | 理赔服务
+									</span>
+								</li>
+								<li>
+									海外商品、想购就购</br>
+									<span>
+										全球直购 | 海外直邮
+									</span>
+								</li>
+								<li>
+									玩转支付宝</br>
+									<span>
+										如何购物 | 新手须知 | 我要开店
+									</span>
+								</li>
+							</ul>
+						</div>
+					<div id="adv2">
+						<div class="safe">
+							支付宝收费规则 |
+							支付宝服务协议</br>
+							蚂蚁金服隐私权政策 |
+							蚂蚁金服客户权益保障承诺书</br>
+							公告
+
+							变更支付宝服务协议的公告</br>
+							《关于防范和打击电信网络诈骗...
+						</div>
+						<div class="safe">
+							下载支付宝</br>
+							<img src="images/erweima.jpg">
+						</div>
+						<div class="safe">
+							<b>支付宝E公益</b></br>
+							帮助听力智障儿童，献爱心。
+							<img src="images/gongyi.jpg">
+						</div>
+					</div>
+					</div>
+				</div>
+			<div id="foot2">
+				诚征英才
+				联系我们
+				International Business
+				支付宝版权所有 2004-2016 ICP证: 沪B2-20150087</br>
+				蚂蚁金服集团|支付宝|余额宝|招财宝|芝麻信用|蚂蚁微贷|网商银行|蚂蚁达客</br>
+				阿里巴巴集团|淘宝网|天猫|聚划算|全球速卖通|阿里巴巴国际交易市场|1688|阿里妈妈|阿里旅行·去啊|阿里云计算|YunOS|阿里通信|万网|高德|优视|友盟|虾米|天天动听|来往|钉钉
+			</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+function $i(id){
+		return document.getElementById(id);
+	}
+	$i("bofan").onclick=function(){
+		$i("mp").style.display="block";
+		$i("mvideo").style.display="none";
+		$i("bofan").style.display="none";
+		setTimeout("mp_video()",23000);
+	}
+	function mp_video(){
+		$i("mp").style.display="none";
+		$i("mvideo").style.display="block";
+		$i("bofan").style.display="block";
+	}
+	$i("imgcode").onclick=function(){
+		$i("imgcode").src="pay_code.php";
+	}
+	setTimeout("mp_video()",23000);
+</script>

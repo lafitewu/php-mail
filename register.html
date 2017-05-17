@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>注册-支付宝</title>
+	<link rel="shortcut icon" href="images/link.ico">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/register.css">
+</head>
+<body>
+	<div id="main">
+		<div id="top">
+			<div id="top_left">
+				<a href="index.html">
+					<img src="images/pay.png"></a>
+				|注册
+			</div>
+			<div id="top_right">
+				<div class="nav">
+					<a href="login.html">登录</a> - 
+					<a href="#">注册</a>  |
+				</div>
+				<div class="nav" id="top_nav1">
+					<a href="#">我的支付宝</a>
+					<img src="images/down.png">  |
+					<div id="nav_list1" class="nav_list">
+						<ul>
+							<li>账户管理</li>
+							<li>交易记录</li>
+							<li>安全中心</li>
+							<li>应用中心</li>
+						</ul>
+					</div>
+				</div>
+				<div class="nav">
+					<a href="#">服务大厅</a>  |
+				</div>
+				<div class="nav">
+					<a href="#">提建议</a>  |
+				</div>
+				<div class="nav" id="top_nav2">
+					<a href="#">更多</a>
+					<img src="images/down.png">
+					<div id="nav_list2" class="nav_list">
+						<ul>
+							<li>无线支付</li>
+							<li>理财专区</li>
+							<li>商家服务</li>
+							<li>返回支付宝首页</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="middle">
+			<div id="m_main">
+				<div id="m_top">
+					<div id="m_top_left">邮箱注册</div>
+					<div id="m_top_right">手机注册</div>
+				</div>
+				<div class="m_middle" id="m_middle1">
+					<div id="m_form">
+						<form  name="myform" action="log_action.php?a=reg" method="post" onsubmit="return check()">
+							<div>
+								用 户 名：<input type="text" name="username" id="username" onblur="checkname()">
+							</div>
+							<div id="label1" class="labell">由4-12位字母数字组成</div>
+							<div>
+								密 &nbsp&nbsp  码：<input type="password" name="password" id="password" onblur="checkpass()">
+							</div>
+							<div class="labell" id="label2">由6-18位字母数字组成</div>
+							<div>
+								确认密码：<input type="password" name="agpassword" id="agpassword" onblur="checkagpass()">
+							</div>
+							<div id="label3" class="labell"></div>
+							<div>
+								邮箱验证：<input type="text" name="mail" id="mail" onblur="checkmail()">
+							</div>
+							<div id="label4" class="labell"></div>
+							<div>
+								<input type="submit" value="注册" id="zhuce">
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="m_middle" id="m_middle2">
+					<div id="m_form2">
+							<div>
+								用 户 名：<input type="text" name="username2" id="username2">
+							</div>
+							<div>
+								密 &nbsp&nbsp  码：<input type="password" name="password2" id="password2">
+							</div>
+							<div>
+								确认密码：<input type="password" name="agpassword2" id="agpassword2">
+							</div>
+							<div>
+								手机验证：<input type="text" name="mail2" id="mail2">
+							</div>
+							<div>
+								<input type="submit" value="注册" id="zhuce2">
+							</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="foot">
+			<div id="footimg1">
+				<img src="images/footimg1.png">
+			</div>
+			<div id="footimg">
+				<img src="images/footimg2.png">
+				<img src="images/footimg3.png">
+				<img src="images/footimg4.png">
+			</div>
+			支付宝版权所有 2004-2016 ICP证：沪B2-20150087
+		</div>
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+$(function(){
+
+	$("#top_nav1").mouseover(function(){
+		$(this).css("background-color","white");
+		$("#nav_list1").stop().slideDown(100);
+	});
+	$("#top_nav1").mouseout(function(){
+		$("#nav_list1").stop().slideUp(100);
+	});
+	$("#top_nav2").mouseover(function(){
+		$("#nav_list2").stop().slideDown(100);
+	});
+	$("#top_nav2").mouseout(function(){
+		$("#nav_list2").stop().slideUp(100);
+	});
+	$("#m_top_left").click(function(){
+		$(this).css("background","url(images/m_topbg.png)");
+		$("#m_top_right").css("background","url(images/mtopbg.png)");
+		$("#m_middle1").slideDown(200);
+		$("#m_middle2").slideUp(200);
+	});
+	$("#m_top_right").click(function(){
+		$(this).css("background","url(images/m_topbg.png)");
+		$("#m_top_left").css("background","url(images/mtopbg.png)");
+		$("#m_middle2").slideDown(200);
+		$("#m_middle1").slideUp(200);
+	});
+	$("input").focus(function(){
+		$(this).animate({
+			width:'200px'
+		},1000);
+	});
+	$("#username").focus(function(){
+		$("#label1").hide(1000);
+	});
+	$("#password").focus(function(){
+		$("#label2").hide(1000);
+	});
+	$("#agpassword").focus(function(){
+		$("#label3").hide(1000);
+	});
+	$("#mail").focus(function(){
+		$("#label4").hide(1000);
+	});
+});
+	function $i(id){
+		return document.getElementById(id);
+	}
+	function checkname(){
+		var username = document.myform.username.value;
+		var reg =/^[a-zA-Z0-9][a-zA-Z0-9]{3,11}$/;//只能由字母数字组成
+		if(!reg.test(username)){
+			$i("label1").style.display="block";
+			$i("label1").style.left="180px";
+			$i("label1").style.color="#F4A41E";
+			$i("label1").innerHTML="请重新输入！";
+			return false;
+		}else{
+			return true;
+		}
+	}
+	function checkpass(){
+		var reg =/^[a-zA-Z0-9][a-zA-Z0-9]{5,16}$/;
+		if(!reg.test($i("password").value)){
+			$i("label2").style.display="block";
+			$i("label2").style.left="175px";
+			$i("label2").style.color="#F4A41E";
+			$i("label2").innerHTML="密码格式错误！";
+			return false;
+		}else{
+			return true;
+		}
+	}
+	function checkagpass(){
+		if($i("password").value!=$i("agpassword").value){
+			$i("label3").style.display="block";
+			$i("label3").style.left="155px";
+			$i("label3").style.color="#F4A41E";
+			$i("label3").innerHTML="两次密码不一致！";
+			return false;
+		}else{
+			return true;
+		}
+	}
+	function checkmail(){
+		var reg=/^[\w]+@[a-zA-Z0-9]+\.((cn)|(com))$/;
+		if(!reg.test($i("mail").value)){
+			$i("label4").style.display="block";
+			$i("label4").style.left="185px";
+			$i("label4").style.color="#F4A41E";
+			$i("label4").innerHTML="格式有误！";
+			return false;
+		}else{
+			return true;
+		}
+	}
+	function check(){
+		if(checkname() && checkpass() && checkagpass() && checkmail()){
+			return true;
+		}else{
+			return false;
+		}
+	}
+</script>

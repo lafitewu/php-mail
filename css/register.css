@@ -1,0 +1,234 @@
+*{
+	padding:0px;
+	margin:0px;
+}
+#main{
+	width:100%;
+	height:945px;
+}
+	#top{
+		width:100%;
+		height:85px;
+		border-bottom:1px solid #E3E3E3; 
+		background:white;
+	}
+		#top_left{
+			color:gray;
+			margin-left:200px;
+			line-height:110px;
+			font-size:30px;
+			float:left;
+		}
+		#top_right{
+			margin-top:30px;
+			margin-left:300px;
+			width:500px;
+			height:50px;
+			float:left;
+		}
+			.nav{
+				text-align:center;
+				padding:10px 5px;
+				font-size:14px;
+				color:gray;
+				margin:auto;
+				float:left;
+			}
+			.nav a{
+				color:gray;
+				text-decoration:none;
+			}
+			.nav a:hover{
+				text-decoration:underline;
+			}
+			/*#top_nav1{
+				box-shadow:1px 1px 1px 1px gray;
+				
+			}
+			#top_nav2{
+				border:1px solid gray;
+			}*/
+			.nav_list{
+				position:absolute;
+				top:66px;
+				width:150px;
+				height:160px;
+				background:white;
+				z-index:3;
+			}
+			#nav_list1{
+				left:805px;
+				box-shadow:1px 1px 1px 1px gray;
+				display:none;
+			}
+				#nav_list1 ul{
+					list-style:none;
+					line-height:40px;
+				}
+				#nav_list1 ul li:hover{
+					font-weight:bold;
+					color:white;
+					cursor:pointer;
+					background:gray;
+				}
+			#nav_list2{
+				box-shadow:1px 1px 1px 1px gray;
+				left:958px;
+				display:none;
+			}
+			#nav_list2 ul{
+					list-style:none;
+					line-height:40px;
+				}
+				#nav_list2 ul li:hover{
+					font-weight:bold;
+					color:white;
+					cursor:pointer;
+					background:gray;
+				}
+	#middle{
+		width:100%;
+		height:600px;
+		border-bottom:1px solid #E3E3E3;
+		/*background:#F9F9F9;*/
+		background:url(../images/loginbg1.jpg) no-repeat;
+		background-size:100%;
+	}
+		#m_main{
+			position:absolute;
+			left:320px;
+			top:150px;
+			width:700px;
+			height:450px;
+			background:white;
+			/*background:rgba(255,255,255,0.7);*/
+			box-shadow:1px 1px 1px 1px gray;
+		}
+			#m_top{
+				width:100%;
+				height:50px;
+				/*background:blue;*/
+			}
+			#m_top:hover{
+				cursor:pointer;
+			}
+				#m_top_left,#m_top_right{
+					font-size:20px;
+					line-height:50px;
+					text-align:center;
+					height:50px;
+					width:50%;
+					float:left;
+					background-size:100%;
+					color:gray;
+				}
+				#m_top_left{
+					background:url(../images/m_topbg.png);
+				}
+				#m_top_left:hover{
+					transform:scale(1.1);
+				}
+				#m_top_right{
+					background:url(../images/mtopbg.png);
+				}
+				#m_top_right:hover{
+					transform:scale(1.1);
+				}
+			.m_middle{
+				width:100%;
+				height:400px;
+			}
+				#m_middle1{
+					background:url(../images/mbg.gif);
+					/*opacity:0.4;*/
+				}
+				#m_form{
+					position:absolute;
+					left:180px;
+					top:80px;
+				}
+					#m_middle1 div{
+						font-size:18px;
+						padding:5px 0px;
+						width:400px;
+						height:50px;
+					}
+					#m_middle1 input{
+						opacity:0.7;
+						font-size:18px;
+						width:150px;
+						height:30px;
+					}	
+						.labell{
+							position:absolute;
+							color:gray;
+							font-size:12px;
+							opacity:0.7;
+						}
+						#label1{
+							left:250px;
+							top:12px;
+						}
+						#label2{
+							left:250px;
+							top:72px;
+						}
+						#label3{
+							top:132px;
+							display:none;
+						}
+						#label4{
+							top:192px;
+							display:none;
+						}
+					#zhuce{
+						opacity:1;
+						width:200px;
+						height:60px;
+						margin-left:50px;
+						background:#F4A41E;
+					}
+
+			#m_middle2{
+				background:url(../images/mbg2.jpg) no-repeat right center;
+				background-size:100%;
+				display:none;
+			}
+				#m_form2{
+					position:absolute;
+					left:180px;
+					top:80px;
+				}
+					#m_middle2 div{
+						font-size:18px;
+						padding:5px 0px;
+						width:400px;
+						height:50px;
+					}
+					#m_middle2 input{
+						font-size:18px;
+						width:150px;
+						height:30px;
+					}
+					#zhuce2{
+						width:200px;
+						height:60px;
+						margin-left:40px;
+						background:#F4A41E;
+					}
+
+	#foot{
+		line-height:30px;
+		font-size:14px;
+		color:gray;
+		text-align:center;
+		width:100%;
+		height:240px;
+		background:#F4F4F4;
+	}
+		#footimg1{
+			padding-top:30px;
+		}
+		#footimg{
+			padding-top:10px;
+		}

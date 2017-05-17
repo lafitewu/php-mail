@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登录-支付宝</title>
+	<link rel="shortcut icon" href="images/link.ico">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery-color.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+</head>
+<body>
+	<div id="main">
+		<div id="nav">
+			<div id="nav_left">
+				<a href="#">支付宝app</a>
+			</div>
+			<div id="nav_right">
+				<a href="index.html">支付宝首页</a> | 
+				<a href="#">服务大厅</a> | 
+				<a href="#">提建议</a>
+			</div>
+		</div>
+		<div id="middle">
+			<div id="ewm">扫码登录</div>
+			<div id="account">账密登录</div>
+			<div id="a_main">
+			<form action="pay_action.php" method="post" >
+				<div class="account" id="remind"></div>
+				<input type="text" class="account" name="username" id="username">
+				<input type="password" name="password" class="account" id="password">
+				<div class="account" id="yzm">
+					<div id="c_input">
+						<input type="text" name="code" id="yzm_code">
+					</div>		
+					<img src="pay_code.php" id="imgcode"/>
+				</div>
+				<div class="account" id="extra">
+					<span>忘记密码？</span>|
+					<a href="register.html">
+						<span>免费注册</span>
+					</a>
+				</div>
+				<input type="submit" class="account" id="denglu" value="登&nbsp录">
+			</form>
+			</div>
+			<div id="e_main">
+				<div id="pic_ewm"></div>
+				<div id="e_font">
+					请使用手机支付宝扫码</br>
+					使用帮助 | 下载支付宝
+				</div>
+			</div>
+		</div>
+		<div id="foot">
+			关于支付宝 | 诚征英才 | 联系我们 | International Business | About Alipay</br>
+			支付宝版权所有 2004-2016 ICP证：沪B2-20150087
+		</div>
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+	$(function(){
+		window.setTimeout(function(){
+			$("#main").css("background","url(images/loginbg2.jpg) no-repeat").css("background-size","100%");
+		},8000);
+		$("#ewm").click(function(){
+			$(this).css("border-bottom","2px solid #449bf4").css("color","#449bf4");
+			$("#account").css("border-bottom","2px solid white").css("color","white");
+			$("#e_main").slideDown();
+			$("#a_main").hide();
+		});
+		$("#account").click(function(){
+			$(this).css("border-bottom","2px solid #449bf4").css("color","#449bf4");
+			$("#ewm").css("border-bottom","2px solid white").css("color","white");
+			$("#a_main").slideDown();
+			$("#e_main").hide();
+		});
+		$("#imgcode").click(function(){
+			$("#imgcode").attr("src","pay_code.php");
+		});
+		var reg;
+		$("#username").blur(function(){
+			if($("#username").val()==""){
+				$("#remind").show().html("用户名不能为空！！");
+			}else{
+				$("#remind").hide();
+			}
+		});
+		$("#password").blur(function(){
+			if($("#password").val()==""){
+				$("#remind").show().html("密码不能为空！！");
+			}else{
+				$("#remind").hide();
+			}
+		});s
+	});
+</script>
